@@ -103,3 +103,44 @@ swapArrayElements(sampleArray, 1, 3);
 console.log("after swapping index 1 and 3",sampleArray);
 let count = countBiggerThan(sampleArray, 25);
 console.log("elements bigger than 25",count);
+
+const t = [5, 10, 15, 20, 25];
+
+const callback = (element, index, arr) => {
+    console.log("Index: ", index, "Element: ", element);
+    arr[index] = element ** 2;
+}
+
+t.forEach(callback);
+
+console.log("after forEach squaring",t);
+
+const t2 = [8, 10, 15, 20, 17];
+
+const SumOfArray = (arr) => {
+    let sum = 0;
+    arr.forEach(element => sum += element);
+    return sum; 
+}
+
+const AvgOfArray = (arr) => {
+    let sum = 0;
+    arr.forEach(element => sum += element);
+    return sum / arr.length;
+}
+
+console.log("Sum of array elements:", SumOfArray(t2));
+console.log("Average of array elements:", Math.floor(AvgOfArray(t2)));
+
+const celsiusTemp = [0, 15, 30, 35, 60];
+
+const toFahrenheit = (element, index, arr) => {
+    arr[index] = (element * 9/5) + 32;
+}
+
+const fahrenheitTemps = celsiusTemp.map(c => (c * 9/5) + 32);
+const fahrenheitTemps2 = celsiusTemp;
+fahrenheitTemps2.forEach(toFahrenheit);
+
+console.log("Fahrenheit temps using map:", fahrenheitTemps);
+console.log("Fahrenheit temps using forEach:", fahrenheitTemps2);
