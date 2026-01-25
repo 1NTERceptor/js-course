@@ -187,3 +187,18 @@ console.table(allNumbers2);
 
 let allNumbers3 = ppl.flatMap(person => person.phoneNumers);
 console.table(allNumbers3);
+
+const tab = [5, 12, 8, 20, 7, 15];
+
+function filterAndDisplay(array, elementPredicate, displayCallback) {
+    const results = array.filter(elementPredicate);
+
+    displayCallback(results);
+}
+
+const displayCallback = (results) => {
+    results.forEach(num => console.log("Filtered number:", num));
+}
+
+filterAndDisplay(tab, (num) => num > 5, displayCallback);
+filterAndDisplay(tab, (num) => num > 10, console.log);
