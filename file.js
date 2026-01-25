@@ -134,13 +134,26 @@ console.log("Average of array elements:", Math.floor(AvgOfArray(t2)));
 
 const celsiusTemp = [0, 15, 30, 35, 60];
 
+console.log("celsius temps:", celsiusTemp)
+
 const toFahrenheit = (element, index, arr) => {
     arr[index] = (element * 9/5) + 32;
 }
 
 const fahrenheitTemps = celsiusTemp.map(c => (c * 9/5) + 32);
-const fahrenheitTemps2 = celsiusTemp;
-fahrenheitTemps2.forEach(toFahrenheit);
+console.log("celsius temps:", celsiusTemp)
+//const fahrenheitTemps2 = celsiusTemp;
+console.log("celsius temps:", celsiusTemp)
+//fahrenheitTemps2.forEach(toFahrenheit);
+//console.log("celsius temps:", celsiusTemp)
 
 console.log("Fahrenheit temps using map:", fahrenheitTemps);
-console.log("Fahrenheit temps using forEach:", fahrenheitTemps2);
+//console.log("Fahrenheit temps using forEach:", fahrenheitTemps2);
+
+console.log("celsius temps:", celsiusTemp)
+const joined = celsiusTemp.join(":");
+console.log("Joined celsius temps:", joined)
+
+const newarray = celsiusTemp.concat(fahrenheitTemps);
+
+console.log("Concatenated string:", newarray);
