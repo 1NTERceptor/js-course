@@ -157,3 +157,33 @@ console.log("Joined celsius temps:", joined)
 const newarray = celsiusTemp.concat(fahrenheitTemps);
 
 console.log("Concatenated string:", newarray);
+
+const ppl = [
+    {
+        name: "Alice",
+        age: 28,
+        phoneNumers: ["123-456-7890", "987-654-3210"]
+    },
+    {
+        name: "Bob",
+        age: 34,
+        phoneNumers: ["555-555-5555"]
+    },
+    {
+        name: "Charlie",
+        age: 22,
+        phoneNumers: ["111-222-3333", "444-555-6666"]
+    }
+]
+
+let allNumbers = ppl.map(person => person.phoneNumers);
+console.table(allNumbers);
+
+let allNumbers2 = [];
+ppl.map(person => person.phoneNumers)
+    .forEach(phoneNumers => allNumbers2=allNumbers2.concat(phoneNumers));
+
+console.table(allNumbers2);
+
+let allNumbers3 = ppl.flatMap(person => person.phoneNumers);
+console.table(allNumbers3);
