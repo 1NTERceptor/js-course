@@ -230,3 +230,32 @@ const tabA = [23, 46, 5];
 const tabB = [11, 3];
 const biggest3 = Get3BiggestNumbers(tabA, tabB, 3);
 console.log("3 biggest numbers:", biggest3);
+
+const coordinates = [150,424,5]
+
+const x = coordinates[0];
+const y = coordinates[1];
+const z = coordinates[2];
+
+console.log("X:", x, "Y:", y, "Z:", z);
+
+//destrukturyzacja tablic
+const [x2, y2, z2] = coordinates;
+
+console.log("X:", x2, "Y:", y2, "Z:", z2);
+
+// pomijanie elementu i reszta tablicy
+const colors = ["Red", "Green", "Blue", "Yellow", "Purple"];
+const [firstColor,  ,...otherColors] = colors;
+
+console.log("First Color:", firstColor);
+console.log("Other Colors:", otherColors);
+
+const values = [10];
+
+//domyślne wartości
+const [firstValue, secondValue = 20, thirdValue = 30] = values;
+
+console.log("First Value:", firstValue);
+console.log("Second Value (default 20):", secondValue);
+console.log("Third Value (default 30):", thirdValue);
