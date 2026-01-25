@@ -221,3 +221,12 @@ const persons = [
 
 persons.sort((a,b) => a.age - b.age);
 console.table(persons);
+
+function Get3BiggestNumbers(tab1, tab2, length) {
+    return tab1.concat(tab2).sort((a,b) => b - a).slice(0, length);
+}
+
+const tabA = [23, 46, 5];
+const tabB = [11, 3];
+const biggest3 = Get3BiggestNumbers(tabA, tabB, 3);
+console.log("3 biggest numbers:", biggest3);
