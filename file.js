@@ -202,3 +202,22 @@ const displayCallback = (results) => {
 
 filterAndDisplay(tab, (num) => num > 5, displayCallback);
 filterAndDisplay(tab, (num) => num > 10, console.log);
+
+const tab1 = [23, 10, 3, 453, 1000];
+
+tab1.sort((a,b)=> b-a);
+
+console.log("Sorted array:", tab1);
+
+const names = ["Zoe", "Adam", "John", "Charlie", "Bob"];
+names.sort((a,b) => b.length - a.length);
+console.log("Sorted names:", names);
+
+const persons = [
+    {name: "Alice", age: 28},
+    {name: "Bob", age: 34},
+    {name: "Charlie", age: 22}
+];
+
+persons.sort((a,b) => a.age - b.age);
+console.table(persons);
