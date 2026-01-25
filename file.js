@@ -259,3 +259,10 @@ const [firstValue, secondValue = 20, thirdValue = 30] = values;
 console.log("First Value:", firstValue);
 console.log("Second Value (default 20):", secondValue);
 console.log("Third Value (default 30):", thirdValue);
+
+const tabC = [1, 2, 3];
+const tabD = [4, 5, 6];
+
+const result = [9,...tabC, ...tabD, 12];
+
+console.log("Resulting array:", result);
