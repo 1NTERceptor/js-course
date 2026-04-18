@@ -42,3 +42,18 @@ bankomat.withDrawMoney(200);
 bankomat.getSaldo();
 bankomat.depositMoney(500);
 bankomat.getSaldo();
+
+const date = new Date();
+
+console.log("Current date and time: " + date);
+
+const pastDate = new Date(1990, 4, 14)
+console.log(pastDate)
+
+console.log(pastDate > date)
+
+const stringDate = "1990/06/06"
+
+const date2 = new Date(stringDate)
+
+console.log(date2)
