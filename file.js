@@ -57,3 +57,21 @@ const stringDate = "1990/06/06"
 const date2 = new Date(stringDate)
 
 console.log(date2)
+
+function isAdult(date){
+    const birthDate = new Date(date);
+    const today = new Date();
+    const age = today.getFullYear() - birthDate.getFullYear();
+    return age > 18;
+}
+
+function monthsToAdult(date){
+    const birthDate = new Date(date);
+    const today = new Date();
+    const age = today.getFullYear() - birthDate.getFullYear();
+    const monthDifference = today.getMonth() - birthDate.getMonth();   
+    return age * 12 + monthDifference;
+}
+
+console.log(isAdult("2000/01/01"))
+console.log(monthsToAdult("2000/01/01"))
