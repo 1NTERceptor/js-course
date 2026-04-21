@@ -75,3 +75,28 @@ function monthsToAdult(date){
 
 console.log(isAdult("2000/01/01"))
 console.log(monthsToAdult("2000/01/01"))
+
+const user2 ={
+    name: "Alice",
+    surname: "Smith",
+    age: 25,
+}
+
+const {name, surname, age} = user2;
+
+console.log(name);
+console.log(surname);
+console.log(age);   
+
+function printUserInfo({name, surname, age}){
+    console.log("Name: " + name);
+    console.log("Surname: " + surname);
+    console.log("Age: " + age);
+}
+
+printUserInfo(user2);
+console.log(user2);
+
+let user3 = {...user2, ...user, status: "active"};
+
+console.log(user3);
